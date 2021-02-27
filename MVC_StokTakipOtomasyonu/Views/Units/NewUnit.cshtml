@@ -1,0 +1,42 @@
+﻿@model MVC_StokTakipOtomasyonu.Models.Entity.Birimler
+@{
+    ViewBag.Title = "NewUnit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="about-heading-content">
+        <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto">
+                <div class="bg-faded rounded p-5">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper"></span>
+                        <span class="section-heading-lower">Birim Ekleme</span>
+                    </h2>
+
+                    <div class="container">
+                       
+                        <form action="/Units/NewUnitAction/">
+                            <div class="form-group">
+                                <label>Birim</label>
+                                <input type="text" name="Birim" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Açıklama</label>
+                                <textarea name="Aciklama" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success">Birim Ekle</button>
+
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

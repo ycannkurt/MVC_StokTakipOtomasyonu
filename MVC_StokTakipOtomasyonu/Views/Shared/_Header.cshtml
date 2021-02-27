@@ -1,0 +1,49 @@
+﻿@using MVC_StokTakipOtomasyonu.ActiveFolder
+
+<h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">FICS Lab.</span>
+    <span class="site-heading-lower">Stok Takip Otomasyonu</span>
+</h1>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Stok Takip Otomasyonu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item @Html.ActivePage("Products","Index") px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="/Products/Index">Ürünler</a>
+                    <span class="sr-only">(current)</span>
+                </li>
+
+                <li class="nav-item @Html.ActivePage("Categories","Index") px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="/Categories/Index">Kategoriler</a>
+                </li>
+
+                <li class="nav-item @Html.ActivePage("Brands","Index") px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="/Brands/Index">Markalar</a>
+                </li>
+
+                <li class="nav-item @Html.ActivePage("Units","Index") px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="/Units/Index">Birimler</a>
+                </li>
+
+                <li class="nav-item @Html.ActivePage("About","Index") px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="/About/Index">Hakkımızda</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link px-lg-4" href="/Kullanicilar/Logout/">Çıkış</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-lg-4" style="color:ActiveBorder">@User.Identity.Name</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

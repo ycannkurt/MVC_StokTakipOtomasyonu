@@ -1,0 +1,56 @@
+﻿@using MVC_StokTakipOtomasyonu.Models.Entity
+@model List<MVC_StokTakipOtomasyonu.Models.Entity.Birimler>
+
+
+@{
+    ViewBag.Title = "Units";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<span class="about-heading-content">
+    <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+            <div class="bg-faded rounded p-5">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper"></span>
+                    <span class="section-heading-lower">Birim Listesi</span>
+                </h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td class="text-uppercase text-expanded font-weight-bold">
+                                ID
+                            </td>
+                            <td class="text-uppercase text-expanded font-weight-bold">
+                                Birim
+                            </td>
+                            <td class="text-uppercase text-expanded font-weight-bold">
+                                Açıklama
+                            </td>
+                            <td class="text-uppercase text-expanded text-danger font-weight-bold">Güncelleme/Silme İşlemleri</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.Birim</td>
+                                <td>@item.Aciklama</td>
+                                <td>
+                                    <a href="/Units/GetDeleteInfo/@item.ID" class="btn btn-danger">Sil</a>
+                                    <a href="/Units/GetUpdateInfo/@item.ID" class="btn btn-primary">Güncelle</a>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                    <span><a href="/Units/NewUnit/" class="btn btn-success" style="margin-bottom:10px;">Birim Ekle</a> </span>
+                </table>
+            </div>
+        </div>
+    </div>
+</span>

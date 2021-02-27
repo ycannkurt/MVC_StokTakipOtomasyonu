@@ -1,0 +1,44 @@
+﻿@model MVC_StokTakipOtomasyonu.Models.Entity.Kategoriler
+
+@{
+    ViewBag.Title = "GetDeleteInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <div class="about-heading-content">
+        <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto">
+                <div class="bg-faded rounded p-5">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper"></span>
+                        <span class="section-heading-lower">Veri Güncelle</span>
+                    </h2>
+                    @using (Html.BeginForm("Delete","Categories"))
+                    { 
+                        <div class="form-group">
+                                @Html.HiddenFor(x=>x.ID)
+                                @Html.LabelFor(x=>x.Kategori)
+                                @Html.DisplayFor(x=>x.Kategori, new { @class="form-control"})
+                        </div>
+                        <div>
+                            
+                            @Html.LabelFor(x => x.Aciklama)
+                            @Html.DisplayFor(x=>x.Aciklama, new { @class = "form-control"
+                       })
+                        </div>
+
+                        <div>
+                            <button class="btn btn-danger">Kategori Sil</button>
+                            <a href="/Categories/Index/" class="btn btn-dark">Ana Sayfaya Dön</a>
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+

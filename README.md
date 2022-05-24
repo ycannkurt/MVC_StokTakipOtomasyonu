@@ -1,1 +1,0 @@
-İnsanları aptal yerine koyarken, onların her şeyin farkında olup içlerinden gülüyor olma ihtimallerini bir düşün derim.
